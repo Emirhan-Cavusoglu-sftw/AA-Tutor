@@ -99,7 +99,6 @@ export const smartAccountCounter = {
 } as const;
 
 // Helper Pimlico function to get current gas price for our userOp
-// gasPriceUtils.js
 export const fetchGasPrice = async (url: string | URL) => {
   try {
     const gasPriceResponse = await fetch(url, {
@@ -120,7 +119,7 @@ export const fetchGasPrice = async (url: string | URL) => {
     }
 
     const gasPriceData = await gasPriceResponse.json();
-    return gasPriceData.result.fast; // Return the fast gas price directly
+    return gasPriceData.result.fast;
   } catch (error) {
     console.error("Error fetching gas price:", error);
     throw error;
